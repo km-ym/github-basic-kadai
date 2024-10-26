@@ -1,0 +1,44 @@
+yumi@omatatomohikonoMacBook-Air Desktop % mkdir git_challenge
+yumi@omatatomohikonoMacBook-Air Desktop % cd git_challenge
+yumi@omatatomohikonoMacBook-Air git_challenge % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /Users/yumi/Desktop/git_challenge/.git/
+yumi@omatatomohikonoMacBook-Air git_challenge % ls -a
+.       ..      .git
+yumi@omatatomohikonoMacBook-Air git_challenge % echo "Hello, world!" >> hello_world.txt
+dquote> "
+Hello, world >> hello_world.txt
+
+yumi@omatatomohikonoMacBook-Air git_challenge % ls    
+yumi@omatatomohikonoMacBook-Air git_challenge % ls -a
+.       ..      .git
+yumi@omatatomohikonoMacBook-Air git_challenge % echo 'Hello, world!' >> hello_world.txt
+yumi@omatatomohikonoMacBook-Air git_challenge % ls
+hello_world.txt
+yumi@omatatomohikonoMacBook-Air git_challenge % cat hello_world.txt 
+Hello, world!
+yumi@omatatomohikonoMacBook-Air git_challenge % git add hello_world.txt 
+yumi@omatatomohikonoMacBook-Air git_challenge % git commit -m "hello_world.txtを追加" 
+[master (root-commit) 2b28dae] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+yumi@omatatomohikonoMacBook-Air git_challenge % echo 'こんにちは、世界！' >> hello_world.txt
+yumi@omatatomohikonoMacBook-Air git_challenge % cat hello_world.txt 
+Hello, world!
+こんにちは、世界！
+yumi@omatatomohikonoMacBook-Air git_challenge % git add hello_world.txt 
+yumi@omatatomohikonoMacBook-Air git_challenge % git commit -m "日本語訳を追記"        
+[master 2e35919] 日本語訳を追記
+ 1 file changed, 1 insertion(+)
+yumi@omatatomohikonoMacBook-Air git_challenge % git log --oneline
+2e35919 (HEAD -> master) 日本語訳を追記
+2b28dae hello_world.txtを追加
